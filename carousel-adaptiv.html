@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Carousel</title>
+    <style>
+        body {
+            background-image: radial-gradient(#8E5C3B, #593829);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .swiper {
+            margin-top: 5em;
+            width: 70%;
+            height: 70%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;          
+            width: 300px;
+            height: 300px;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-button-prev {
+            left: 5em;
+        }
+        .swiper-button-next {
+            right: 5em;
+        }
+        img {
+            -webkit-box-reflect: below 10px linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.399));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/curves-2942475_640.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/fall-2874547_640.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/fall-4465774_640.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/forest-1345747_640.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/forest-3804001_640.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/path-4591121_640.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/road-1072821_640.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/road-6745746_640.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/woods-1072819_640.jpg"/>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
